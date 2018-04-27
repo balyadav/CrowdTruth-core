@@ -23,7 +23,7 @@ class Metrics():
         '''
         
         sqs_numerator = 0.0
-        sqs_denominator = 0.0
+        sqs_denominator = 0.01
         worker_ids = list(sent_work_rel_dict[sentence_id].keys())
 
         for worker_i in range(len(worker_ids) - 1):
@@ -152,7 +152,7 @@ class Metrics():
         
         for relation in relations:
             rqs_nominator[relation] = 0.0
-            rqs_denominator[relation] = 0.0
+            rqs_denominator[relation] = 0.01
         
         worker_ids = work_sent_rel_dict.keys()
         for worker_i in worker_ids:
